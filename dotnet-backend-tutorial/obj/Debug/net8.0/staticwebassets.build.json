@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "G+E1TtBhCoApeJT4HWecNwXDwb535YERSenIV3WOPkI=",
+  "Source": "dotnet-backend-tutorial",
+  "BasePath": "_content/dotnet-backend-tutorial",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
