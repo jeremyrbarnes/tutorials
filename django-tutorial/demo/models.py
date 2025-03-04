@@ -15,6 +15,9 @@ class Book(models.Model):
         max_digits=3,
         decimal_places=2,
     )
+    published = models.DateField(
+        null=True
+    )
     is_published = models.BooleanField(
         default=False,
     )
