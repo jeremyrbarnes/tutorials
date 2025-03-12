@@ -1,6 +1,10 @@
 GET http://localhost:5155/api/products
 
+###
+
 GET http://localhost:5155/api/products/2
+
+###
 
 POST http://localhost:5155/api/products
 content-type: application/json
