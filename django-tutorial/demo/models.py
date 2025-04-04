@@ -1,6 +1,9 @@
 from django.db import models
 
 class Book(models.Model):
+    def __str__(self):
+        return self.title
+
     title = models.CharField(
         blank=False,
         unique=True,

@@ -2,16 +2,16 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 from .models import Book
+from django.shortcuts import render
+from rest_framework import viewsets
 
-class Another(View):
+from .serializers import BookSerializer
 
-    book = Book.objects.get(id=2)
-    output = ''
-    #for book in books:
-    output += f"We have {book.title} with ID {book.id}<br />"
-
-    def get(self, request: object) -> HttpResponse:
-        return HttpResponse(self.output)
 
 def first(request) -> HttpResponse:
-    return HttpResponse("First message from views")
+    books = Book.objects.all()
+    return render(request, 'first_template.html', {'books': books})
+
+class BookViewSet(viewsets.ModelViewSet):
+    serializer_class = BookSerializer
+    queryset = Book.objects.all()
