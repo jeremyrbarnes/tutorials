@@ -1,6 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddSingleton<List<Product>>();
 
+var logLevel = Environment.GetEnvironmentVariable("LOG_LEVEL");
+var apiKey = Environment.GetEnvironmentVariable("API_KEY");
+
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 var url = $"http://0.0.0.0:{port}";
 builder.WebHost.UseUrls(url);
